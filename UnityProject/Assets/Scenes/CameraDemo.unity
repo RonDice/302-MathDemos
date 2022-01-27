@@ -225,7 +225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &674176737
 AudioListener:
   m_ObjectHideFlags: 0
@@ -517,6 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239a99fd334f34b4ca18d64a111693e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeMultiplier: 1
+  timeOffset: 0
   orbitCenter: {fileID: 1659001171}
   radius: 300
   res: 32
@@ -820,13 +822,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1808259633}
   - component: {fileID: 1808259632}
+  - component: {fileID: 1808259634}
   m_Layer: 0
   m_Name: Orbit Camera Rig
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1808259632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -859,3 +862,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1808259634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808259631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84da315def3bccd458b43399dd460cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeScale: 1
