@@ -27,7 +27,7 @@ public class OrbitCameraRig : MonoBehaviour
     void Start()
     {
         cam = GetComponentInChildren<Camera>();
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class OrbitCameraRig : MonoBehaviour
         yaw += mx * mouseSensitivityX;
         pitch -= my * mouseSensitivityY;
 
-        pitch = Mathf.Clamp(pitch, -89, 89);
+        pitch = Mathf.Clamp(pitch, -45, 45);
 
 
         transform.rotation = Quaternion.Euler(pitch, yaw, 0);

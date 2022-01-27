@@ -12,7 +12,7 @@ public class OrbitDemo : MonoBehaviour
 
     public Transform orbitCenter;
 
-    public float radius = 1000;
+    public float radius = 1;
     public int res = 32;
 
     private LineRenderer path;
