@@ -337,7 +337,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400873930}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -444,7 +444,7 @@ MonoBehaviour:
   timeMultiplier: 0.5
   timeOffset: 0
   orbitCenter: {fileID: 1659001171}
-  radius: 302
+  radius: 10
   res: 32
 --- !u!65 &400873933
 BoxCollider:
@@ -626,7 +626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &674176737
 AudioListener:
   m_ObjectHideFlags: 0
@@ -705,7 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4627015238142a0439a9af18f0fa5904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1228250073}
+  target: {fileID: 1659001171}
   desiredDistance: 1
 --- !u!1 &790488560
 GameObject:
@@ -835,7 +835,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822038732}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -874,7 +874,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 5}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.06969712
+    widthMultiplier: 0.25
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -942,7 +942,7 @@ MonoBehaviour:
   timeMultiplier: 0.15
   timeOffset: 0
   orbitCenter: {fileID: 1659001171}
-  radius: 301
+  radius: 6
   res: 32
 --- !u!65 &822038735
 BoxCollider:
@@ -1212,7 +1212,7 @@ MonoBehaviour:
   timeMultiplier: 1
   timeOffset: 0
   orbitCenter: {fileID: 1659001171}
-  radius: 300
+  radius: 2
   res: 32
 --- !u!120 &1228250075
 LineRenderer:
@@ -1260,7 +1260,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 5}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.06969712
+    widthMultiplier: 0.096759655
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1978,7 +1978,7 @@ GameObject:
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1808259632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,7 +2183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -195, y: 53}
+  m_AnchoredPosition: {x: -210, y: 51}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880247748
@@ -2205,7 +2205,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
