@@ -50,7 +50,7 @@ public class OrbitCameraRig : MonoBehaviour
 
         Vector2 ScrollAmt = Input.mouseScrollDelta;
         disToTarget += ScrollAmt.y * scrollSensitivity;
-        disToTarget = Mathf.Clamp(disToTarget, 5, 50);
+        disToTarget = Mathf.Clamp(disToTarget, 1, 50);
 
         float z = AnimMath.Ease(cam.transform.localPosition.z, -disToTarget, .01f);
 
@@ -62,7 +62,7 @@ public class OrbitCameraRig : MonoBehaviour
 
 
         //snap to target
-        //transform.position = thingToLookAt.position;
+        transform.position = thingToLookAt.position;
 
         //ease to target
         transform.position = AnimMath.Ease(transform.position, thingToLookAt.position, .001f);

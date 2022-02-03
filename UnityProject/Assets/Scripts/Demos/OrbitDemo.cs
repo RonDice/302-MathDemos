@@ -21,6 +21,10 @@ public class OrbitDemo : MonoBehaviour
     void Start()
     {
         path = GetComponent<LineRenderer>();
+
+        path.loop = true;
+        path.useWorldSpace = true;
+
         UpdateOrbitPath();
     }
 
@@ -52,8 +56,8 @@ public class OrbitDemo : MonoBehaviour
         for (int i = 0; i < pts.Length; i++) 
         { 
 
-         float x = Mathf.Cos(i * radsPerCircle/res);
-         float z = Mathf.Sin(i * radsPerCircle/res);
+         float x = radius *Mathf.Cos(i * radsPerCircle/res);
+         float z = radius *Mathf.Sin(i * radsPerCircle/res);
 
          Vector3 pt = new Vector3(x, 0, z) + orbitCenter.position;
             pts[i] = pt;
