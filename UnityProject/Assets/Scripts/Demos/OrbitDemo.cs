@@ -9,11 +9,12 @@ public class OrbitDemo : MonoBehaviour
     public float timeMultiplier = 1;
     public float timeOffset = 0;
 
-
+    public GameObject rotateCenter;
     public Transform orbitCenter;
 
     public float radius = 10;
-    public int res = 32;
+    public int res = 128;
+        
 
     private LineRenderer path;
 
@@ -31,7 +32,7 @@ public class OrbitDemo : MonoBehaviour
     
     void Update()
     {
-
+        //Orbit Path
         if (!orbitCenter) return;
         float x = radius * Mathf.Cos(Time.time * timeMultiplier + timeOffset  );
         float z = radius * Mathf.Sin(Time.time * timeMultiplier + timeOffset  );
@@ -39,6 +40,12 @@ public class OrbitDemo : MonoBehaviour
         transform.position = new Vector3(x,0,z) + orbitCenter.position;
 
         if (orbitCenter.hasChanged) UpdateOrbitPath();
+
+
+        //Planetary Rotation
+        transform.RotateAround(rotateCenter.transform.position, Vector3.up, 20 * Time.deltaTime);
+
+
 
     }
 

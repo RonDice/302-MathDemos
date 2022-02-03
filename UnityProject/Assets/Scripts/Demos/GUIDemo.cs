@@ -10,15 +10,14 @@ public class GUIDemo : MonoBehaviour
 
     public TMP_Text textPlayerHealth;
     public Slider slider;
-    public Dropdown mydropdown;
+    public Dropdown dropdown;
     public Text TextBox;
-    public GameObject FlightCam;
-    public GameObject OrbitalCam;
-    public GameObject LookAtCam;
+    public static bool GamePaused = false;
 
     void Start()
     {
         if(slider) slider.value = Time.timeScale;
+       
     }
 
     // Update is called once per frame
@@ -29,33 +28,31 @@ public class GUIDemo : MonoBehaviour
 
     public void ButtonClicked()
     {
-        print("Button Clicked");
+        if (GamePaused)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
+        
     }
     public void SliderUpdate(float value)
     {
         Time.timeScale = value;
     }
-    
-    public void HandleInputData (int val)
+
+    void Resume()
     {
-        if (val == 0)
-        {
-            FlightCam.SetActive(true);
-            LookAtCam.SetActive(false);
-            OrbitalCam.SetActive(false);
-        }
-        if (val == 1)
-        {
-            LookAtCam.SetActive(true);
-            FlightCam.SetActive(false);
-            OrbitalCam.SetActive(false);
-        }
-        if (val == 2)
-        {
-            OrbitalCam.SetActive(true);
-            FlightCam.SetActive(false);
-            LookAtCam.SetActive(false);
-        }
+        Time.timeScale = 1;
+        GamePaused = false;
+    }
+
+    void Pause()
+    {
+        Time.timeScale = 0;
+        GamePaused = true;
     }
 
 }

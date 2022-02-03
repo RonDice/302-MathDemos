@@ -7,8 +7,9 @@ public class OrbitCameraRig : MonoBehaviour
 
 
 
-    public Transform thingToLookAt;
+    public Transform target;
 
+    
 
     private float pitch = 0;
     private float yaw = 0;
@@ -18,7 +19,7 @@ public class OrbitCameraRig : MonoBehaviour
     public float mouseSensitivityY = 100;
     public float scrollSensitivity = 100;
 
-
+  
     private Camera cam;
 
 
@@ -43,8 +44,8 @@ public class OrbitCameraRig : MonoBehaviour
 
         pitch = Mathf.Clamp(pitch, -45, 45);
 
-
         transform.rotation = Quaternion.Euler(pitch, yaw, 0);
+
 
         //dolly (zoom)
 
@@ -58,16 +59,18 @@ public class OrbitCameraRig : MonoBehaviour
 
 
         //Position
-        if (thingToLookAt == null) return;
-
-
+        if (target == null) return;
+        
+      
         //snap to target
-        transform.position = thingToLookAt.position;
+        transform.position = target.position;
 
         //ease to target
-        transform.position = AnimMath.Ease(transform.position, thingToLookAt.position, .001f);
+        transform.position = AnimMath.Ease(transform.position, target.position, .001f);
 
-
+        
 
     }
+
+    
 }

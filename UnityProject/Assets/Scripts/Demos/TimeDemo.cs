@@ -6,7 +6,7 @@ public class TimeDemo : MonoBehaviour
 
 {
 
-    [Range(-1, 1)]
+    [Range(-2, 2)]
     public float timeScale = 1;
 
     // Start is called before the first frame update
